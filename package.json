@@ -1,9 +1,16 @@
 {
   "name": "monorepo",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev:web": "pnpm --filter @monorepo/web dev",
+    "build:web": "pnpm --filter @monorepo/web build",
+    "start:web": "pnpm --filter @monorepo/web start",
+    "dev:mobile": "pnpm --filter @monorepo/mobile start",
+    "build:mobile": "pnpm --filter @monorepo/mobile build",
+    "dev:android": "pnpm --filter @monorepo/mobile android",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

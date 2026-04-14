@@ -1,7 +1,7 @@
 {
   "name": "@monorepo/mobile",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/index.ts",
   "scripts": {
     "start": "expo start --dev-client",
     "android": "expo run:android",
@@ -9,10 +9,16 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@monorepo/data": "workspace:*",
+    "@monorepo/styles": "workspace:*",
+    "@monorepo/ui": "workspace:*",
+    "@react-native-async-storage/async-storage": "2.2.0",
     "expo": "~54.0.33",
     "expo-status-bar": "~3.0.9",
-    "react": "19.1.0",
-    "react-native": "0.81.5"
+    "react": "19.2.0",
+    "react-native": "0.81.5",
+    "react-native-reanimated": "^4.3.0",
+    "react-native-worklets": "^0.8.1"
   },
   "private": true
 }

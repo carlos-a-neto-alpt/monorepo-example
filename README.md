@@ -90,13 +90,16 @@ With this structure it is easier to read the names and find the files, we can al
 
 ```
 - /web
-    L /auth
-        L /login
-            page.tsx  (Next.js)
+    L /src
+        L /app
+            L /auth
+                L /login
+                    L page.tsx  (Next.js)
 - /mobile
-    L /auth
-        L /login
-            L index.tsx
+    L /screens
+        L /auth
+            L /login
+                L index.tsx
 - /packages
     L /ui
         L /screens
@@ -111,5 +114,7 @@ With this structure it is easier to read the names and find the files, we can al
 > NOTE: Notice the file path in the packages starts at the screens folder
 
 2. All the file and folder names **MUST** be in **lower case** separated with an hyphen where is the space, this is just a pattern to keep all the files and folders organized because we might have code that depends on the file name and without a pattern this will be difficult to work on.
-3. The components declarations, functions, hooks, states, constants, variables, must be in `camelCase`, the types and components references must be in `PascalCase` and the constants in the project (not the constants in the pages, components, etc) must be in `UPPER_CASE` with an underscore to separete the words (the projects constants are often in the .env file).
+3. The functions, hooks, states, constants, variables, must be in `camelCase`, the types, components references and declarations must be in `PascalCase` and the constants in the project (not the constants in the pages, components, etc) must be in `UPPER_CASE` with an underscore to separete the words (the projects constants are often in the .env file).
 4. Only put components in the components folder if they are 100% reusable in any screen and in that platform or for all platforms. If the component is specific for that screen or context, create a folder called `fragments` inside the screen folder. Components are reusable anywhere in the projects, fragments are specific for a certain context or screen and not reusable anywhere else except a few screens.
+5. All the shared created screens, their fragments and types must be exported at their own folder.
+6. All the shared components must be added to the components index file to export.
